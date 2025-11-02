@@ -17,6 +17,7 @@ use Crater\Policies\RecurringInvoicePolicy;
 use Crater\Policies\ReportPolicy;
 use Crater\Policies\SettingsPolicy;
 use Crater\Policies\UserPolicy;
+use Crater\Policies\BudgetPolicy;
 use Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
@@ -30,6 +31,7 @@ class AuthServiceProvider extends ServiceProvider
     protected $policies = [
         \Crater\Models\Customer::class => \Crater\Policies\CustomerPolicy::class,
         \Crater\Models\Invoice::class => \Crater\Policies\InvoicePolicy::class,
+        \Crater\Models\Budget::class => \Crater\Policies\BudgetPolicy::class,
         \Crater\Models\Estimate::class => \Crater\Policies\EstimatePolicy::class,
         \Crater\Models\Payment::class => \Crater\Policies\PaymentPolicy::class,
         \Crater\Models\Expense::class => \Crater\Policies\ExpensePolicy::class,

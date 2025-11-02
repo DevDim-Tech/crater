@@ -45,6 +45,7 @@ use Crater\Http\Controllers\V1\Admin\Invoice\InvoicesController;
 use Crater\Http\Controllers\V1\Admin\Invoice\InvoiceTemplatesController;
 use Crater\Http\Controllers\V1\Admin\Invoice\SendInvoiceController;
 use Crater\Http\Controllers\V1\Admin\Invoice\SendInvoicePreviewController;
+use Crater\Http\Controllers\V1\Admin\Budget\BudgetsController;
 use Crater\Http\Controllers\V1\Admin\Item\ItemsController;
 use Crater\Http\Controllers\V1\Admin\Item\UnitsController;
 use Crater\Http\Controllers\V1\Admin\Mobile\AuthController;
@@ -278,6 +279,20 @@ Route::prefix('/v1')->group(function () {
             Route::get('/invoices/templates', InvoiceTemplatesController::class);
 
             Route::apiResource('invoices', InvoicesController::class);
+
+
+            // Budgets
+            //-------------------------------------------------
+
+            Route::post('/budgets/generate-ai', [BudgetsController::class, 'generateWithAI']);
+            
+            Route::post('/budgets/analyze-requirements', [BudgetsController::class, 'analyzeRequirements']);
+            
+            Route::post('/budgets/estimate-costs', [BudgetsController::class, 'estimateCosts']);
+
+            Route::post('/budgets/delete', [BudgetsController::class, 'delete']);
+
+            Route::apiResource('budgets', BudgetsController::class);
 
 
             // Recurring Invoice
