@@ -166,18 +166,28 @@ OPENAI_API_KEY=tu_api_key  # A configurar
    - Servidor Laravel: http://127.0.0.1:8000
    - Vite Dev Server: http://localhost:3000
 
-### Fase 2: Integración OpenAI
-1. Instalar OpenAI SDK
-2. Crear módulo AI
-3. Implementar servicios base
-4. Crear tests unitarios
+### Fase 2: Integración OpenAI ✅ COMPLETADO
+1. ✅ Instalar OpenAI SDK (openai-php/client v0.18.0)
+2. ✅ Crear módulo AI con namespace Crater\AI
+3. ✅ Implementar servicios base (OpenAIService)
+4. ✅ Crear tests unitarios (3/3 passing)
+5. ✅ Configurar GPUStack endpoint personalizado
+6. ✅ Implementar prompts en español
 
-### Fase 3: Módulo de Presupuestos
-1. Crear migraciones
-2. Crear modelos
-3. Implementar controladores
-4. Crear componentes Vue
-5. Integrar con IA
+### Fase 3: Módulo de Presupuestos 🚧 EN PROGRESO
+1. ✅ Crear migraciones (budgets, budget_items)
+2. ✅ Ejecutar migraciones
+3. ✅ Crear modelos (Budget, BudgetItem)
+4. ✅ Implementar relaciones entre modelos
+5. ✅ Crear BudgetsController con métodos CRUD
+6. ✅ Crear BudgetRequest y DeleteBudgetRequest para validación
+7. ✅ Crear BudgetResource y BudgetItemResource
+8. ✅ Crear BudgetPolicy con reglas de autorización
+9. ✅ Registrar rutas API
+10. ⏳ Crear componentes Vue.js
+11. ⏳ Crear tests unitarios y de integración
+12. ⏳ Probar generación de presupuestos con IA
+13. ⏳ Documentar API endpoints
 
 ## Notas Importantes
 

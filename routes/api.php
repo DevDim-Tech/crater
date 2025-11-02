@@ -285,9 +285,9 @@ Route::prefix('/v1')->group(function () {
             //-------------------------------------------------
 
             Route::post('/budgets/generate-ai', [BudgetsController::class, 'generateWithAI']);
-            
+
             Route::post('/budgets/analyze-requirements', [BudgetsController::class, 'analyzeRequirements']);
-            
+
             Route::post('/budgets/estimate-costs', [BudgetsController::class, 'estimateCosts']);
 
             Route::post('/budgets/delete', [BudgetsController::class, 'delete']);
