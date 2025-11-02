@@ -44,6 +44,12 @@ return [
         ],
     ],
 
+    'openai' => [
+        'api_key' => env('OPENAI_API_KEY'),
+        'base_uri' => env('OPENAI_BASE_URI', 'https://api.openai.com/v1'),
+        'organization' => env('OPENAI_ORGANIZATION'),
+    ],
+
     'facebook' => [
         'client_id' => env('FACEBOOK_CLIENT_ID'),
         'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
